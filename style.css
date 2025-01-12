@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    animation: gradient 10s infinite alternate;
+    overflow: hidden;
+}
+
+@keyframes gradient {
+    0% {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+    50% {
+        background: linear-gradient(135deg, #ff512f, #dd2476);
+    }
+    100% {
+        background: linear-gradient(135deg, #1fa2ff, #12d8fa);
+    }
+}
+
+.background .shape {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    border-radius: 50%;
+    animation: float 5s infinite alternate;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+}
+
+.shape:first-child {
+    left: -80px;
+    top: -80px;
+}
+
+.shape:last-child {
+    right: -50px;
+    bottom: -80px;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-30px);
+    }
+}
+
+.wrapper {
+    position: relative;
+    width: 380px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.img-area {
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.img-area img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #ffd700;
+}
+
+.about {
+    font-size: 16px;
+    color: #d0d1d7;
+    margin: 10px 0 20px;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    height: 50px;
+    width: 50px;
+    margin: 0 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* LinkedIn Button */
+.social-icons a.linkedin {
+    background: #0077b5;
+}
+.social-icons a.linkedin:hover {
+    background: #005582;
+}
+
+/* GitHub Button */
+.social-icons a.github {
+    background: #333;
+}
+.social-icons a.github:hover {
+    background: #24292e;
+}
+
+/* Instagram Button */
+.social-icons a.instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+.social-icons a.instagram:hover {
+    background: linear-gradient(45deg, #e6683c, #dc2743, #cc2366, #bc1888, #a930b6);
+}
+
+/* Facebook Button */
+.social-icons a.facebook {
+    background: #1877f2;
+}
+.social-icons a.facebook:hover {
+    background: #145dbf;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 12px 20px;
+    margin: 5px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #ff512f, #f09819);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.buttons button:hover {
+    background: linear-gradient(45deg, #f09819, #ff512f);
+    transform: scale(1.1);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content form input,
+.modal-content form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal-content form button {
+    background: #1f1c2c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content form button:hover {
+    background: #ff512f;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+}

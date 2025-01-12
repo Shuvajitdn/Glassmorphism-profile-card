@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="wrapper">
+        <div class="img-area">
+            <div class="inner-area">
+                <img src="image.jpg" alt="Profile Picture">
+            </div>
+        </div>
+
+        <div class="name">Shuvajit Debnath</div>
+        <div class="about">Professional Full-Stack Developer</div>
+
+        <div class="social-icons">
+            <a href="#" class="linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="github" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="facebook" title="Facebook"><i class="fab fa-facebook"></i></a>
+        </div>
+
+        <div class="buttons">
+            <button class="message-btn">Message</button>
+            <button class="subscribe-btn">Subscribe</button>
+            <button class="cv-btn">Download CV</button>
+        </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Me</h2>
+            <form action="#">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
